@@ -1,10 +1,10 @@
 # ramulator-NVMain
     An Architectural Level Main Memory Simulator for 
-Emerging Non-Volatile Memories
+    Emerging Non-Volatile Memories
 
 ======================================================
 
-Sections
+#Sections
 
     1. Overview
     2. Building ramulator-NVMain
