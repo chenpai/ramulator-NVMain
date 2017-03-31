@@ -33,7 +33,7 @@
     We feed NVMain with DRAM command traces obtained from 
     our simulations using Ramulator. 
 	
-    Thanks for trying ramulator-NVMain!
+    # Thanks for trying ramulator-NVMain!
 
 ------------------------------------------------------
 
