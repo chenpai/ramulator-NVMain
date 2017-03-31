@@ -1,5 +1,6 @@
-ramulator-NVMain - An Architectural Level Main Memory Simulator
-         for Emerging Non-Volatile Memories
+ramulator-NVMain 
+    An Architectural Level Main Memory Simulator for 
+Emerging Non-Volatile Memories
 
 ======================================================
 
@@ -7,7 +8,7 @@ Sections
 
     1. Overview
     2. Building ramulator-NVMain
-		Trace Simulation
+	Trace Simulation
     3. Running ramulator-NVMain
     4. Configuring ramulator-NVMain
     5. Hacking ramulator-NVMain
@@ -18,21 +19,21 @@ Sections
 1. Overview
 
     ramulator-NVMain is a cycle accurate main memory 
-	simulator designed to simulate emerging non-volatile
+    simulator designed to simulate emerging non-volatile
     memories at the architectural level. Since the 
     current status of non-volatile memory is unknown
     and this is a research tool, flexability is provided
-	to implement different variations of memory controllers, 
-	interconnects, organizations, etc. Ramulator as our 
-	processor, in CPU trace-driven mode. CPU traces are 
-	collected using a Pintool. To model the stacked and 
-	the off-chip DRAM memory we have integrated a detailed
-	main memory simulator - NVMain. We use NVMain to obtain
-	Latency and hit rate results of the DRAM cache subsystem. 
-	We feed NVMain with DRAM command traces obtained from 
-	our simulations using Ramulator. 
+    to implement different variations of memory controllers, 
+    interconnects, organizations, etc. Ramulator as our 
+    processor, in CPU trace-driven mode. CPU traces are 
+    collected using a Pintool. To model the stacked and 
+    the off-chip DRAM memory we have integrated a detailed
+    main memory simulator - NVMain. We use NVMain to obtain
+    Latency and hit rate results of the DRAM cache subsystem. 
+    We feed NVMain with DRAM command traces obtained from 
+    our simulations using Ramulator. 
 	
-	Thanks for trying ramulator-NVMain!
+    Thanks for trying ramulator-NVMain!
 
 ------------------------------------------------------
 
@@ -43,15 +44,15 @@ Sections
 
     Trace Simulation
 
-        The trace simulation can be build using scons:
+    The trace simulation can be build using scons:
 
-        $ scons --build-type=[release|debug]
+    $ scons --build-type=[release|debug]
 
-        Compiling with scons will automatically set 
-        the compile flags needed for trace-based
-        simulation. You can use --build-type=debug
-        to add debugging symbol, or release for 
-        -03 optimization.
+    Compiling with scons will automatically set 
+    the compile flags needed for trace-based
+    simulation. You can use --build-type=debug
+    to add debugging symbol, or release for 
+    -03 optimization.
 
 
 ------------------------------------------------------
@@ -64,10 +65,10 @@ Sections
 
     ./nvmain CONFIG_FILE TRACE_FILE 
 	
-	eg.
-	cd ramulator-NVMain
-	scons
-	./nvmain.fast Tests/Configs/LO.config ../Trace/403.gcc
+    eg.
+    cd ramulator-NVMain
+    scons
+    ./nvmain.fast Tests/Configs/LO.config ../Trace/403.gcc
 
     The CONFIG_FILE is the path to the configuration file
     for the memory system being simulated. The TRACE_FILE
@@ -93,10 +94,10 @@ Sections
 
 
     As mentioned in the overview, ramulator-NVMain 
-	is meant to be flexible. Writing your own 
-	interconnect, memory controller, endurance model, 
-	address translator, etc. Can be done by creating 
-	a new C++ file with your new class.
+    is meant to be flexible. Writing your own 
+    interconnect, memory controller, endurance model, 
+    address translator, etc. Can be done by creating 
+    a new C++ file with your new class.
 
     Each unit has a Factory class which selects 
     the class to used based on the configuration
